@@ -1,0 +1,581 @@
+{
+	"info": {
+		"_postman_id": "54d0780b-7373-4bbe-ab8b-13022a3d76d3",
+		"name": "API HOUR Collection",
+		"description": "\nUne super api pour API HOUR !\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "personnes",
+			"item": [
+				{
+					"name": "{user id}",
+					"item": [
+						{
+							"name": "Chercher Une Personne",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/personnes/:user_id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"personnes",
+										":user_id"
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "52629280",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Chercher une personne"
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/personnes/:user_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"personnes",
+												":user_id"
+											],
+											"variable": [
+												{
+													"key": "user_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"email\": \"incididunt aliqua ut\",\n \"id\": -8100822,\n \"is_active\": true\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/personnes/:user_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"personnes",
+												":user_id"
+											],
+											"variable": [
+												{
+													"key": "user_id"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"dolore nostrud\",\n    \"et sit labore irure adipisicing\"\n   ],\n   \"msg\": \"laboris culpa deserunt\",\n   \"type\": \"aliquip consequat deserunt amet do\"\n  },\n  {\n   \"loc\": [\n    \"in esse\",\n    \"eu proident\"\n   ],\n   \"msg\": \"consectetur\",\n   \"type\": \"consectetur laborum fugiat\"\n  }\n ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Associer Une Personne Et Une Boisson",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"et Excepteur\",\n    \"description\": \"aute sint incididunt consectetur nisi\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/personnes/:user_id/boissons/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"personnes",
+										":user_id",
+										"boissons",
+										""
+									],
+									"variable": [
+										{
+											"key": "user_id",
+											"value": "52629280",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Associer une personne et une boisson"
+							},
+							"response": [
+								{
+									"name": "Successful Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"et Excepteur\",\n    \"description\": \"aute sint incididunt consectetur nisi\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/personnes/:user_id/boissons/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"personnes",
+												":user_id",
+												"boissons",
+												""
+											],
+											"variable": [
+												{
+													"key": "user_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"title\": \"adipisicing incididun\",\n \"id\": 53119524,\n \"owner_id\": -30185879,\n \"description\": \"occaecat labore deserunt\"\n}"
+								},
+								{
+									"name": "Validation Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"et Excepteur\",\n    \"description\": \"aute sint incididunt consectetur nisi\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/personnes/:user_id/boissons/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"personnes",
+												":user_id",
+												"boissons",
+												""
+											],
+											"variable": [
+												{
+													"key": "user_id"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"dolore nostrud\",\n    \"et sit labore irure adipisicing\"\n   ],\n   \"msg\": \"laboris culpa deserunt\",\n   \"type\": \"aliquip consequat deserunt amet do\"\n  },\n  {\n   \"loc\": [\n    \"in esse\",\n    \"eu proident\"\n   ],\n   \"msg\": \"consectetur\",\n   \"type\": \"consectetur laborum fugiat\"\n  }\n ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Creer Une Personne",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"aliquip co\",\n    \"password\": \"consectetur do fugiat dolor\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/personnes/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"personnes",
+								""
+							]
+						},
+						"description": "Créer une personne"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"aliquip co\",\n    \"password\": \"consectetur do fugiat dolor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/personnes/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"personnes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"email\": \"sint sed proident\",\n \"id\": -28339983,\n \"is_active\": false\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"aliquip co\",\n    \"password\": \"consectetur do fugiat dolor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/personnes/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"personnes",
+										""
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"nisi ipsum\",\n    \"nis\"\n   ],\n   \"msg\": \"qui\",\n   \"type\": \"ex consectetur magn\"\n  },\n  {\n   \"loc\": [\n    \"esse cillum ut ad\",\n    \"magna sunt elit cillum\"\n   ],\n   \"msg\": \"quis adipisicing sint\",\n   \"type\": \"minim voluptate in culpa\"\n  }\n ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Lister Les Personnes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/personnes?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"personnes"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						},
+						"description": "Lister les personnes"
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/personnes?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"personnes"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"email\": \"Duis est\",\n  \"id\": 69164354,\n  \"is_active\": false\n },\n {\n  \"email\": \"eiusmod laboris voluptate ut in\",\n  \"id\": -72904219,\n  \"is_active\": true\n }\n]"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/personnes?skip=0&limit=100",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"personnes"
+									],
+									"query": [
+										{
+											"key": "skip",
+											"value": "0"
+										},
+										{
+											"key": "limit",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"dolore nostrud\",\n    \"et sit labore irure adipisicing\"\n   ],\n   \"msg\": \"laboris culpa deserunt\",\n   \"type\": \"aliquip consequat deserunt amet do\"\n  },\n  {\n   \"loc\": [\n    \"in esse\",\n    \"eu proident\"\n   ],\n   \"msg\": \"consectetur\",\n   \"type\": \"consectetur laborum fugiat\"\n  }\n ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Lister Les Boissons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/boissons?skip=0&limit=100",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"boissons"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						}
+					]
+				},
+				"description": "Lister les boissons"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/boissons?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"boissons"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "[\n {\n  \"title\": \"laborum ut\",\n  \"id\": 72618717,\n  \"owner_id\": 73336366,\n  \"description\": \"et adipisicing occaecat labore minim\"\n },\n {\n  \"title\": \"Excepteur et\",\n  \"id\": 81621346,\n  \"owner_id\": -38791508,\n  \"description\": \"adipisicing et\"\n }\n]"
+				},
+				{
+					"name": "Validation Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/boissons?skip=0&limit=100",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"boissons"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"detail\": [\n  {\n   \"loc\": [\n    \"dolore nostrud\",\n    \"et sit labore irure adipisicing\"\n   ],\n   \"msg\": \"laboris culpa deserunt\",\n   \"type\": \"aliquip consequat deserunt amet do\"\n  },\n  {\n   \"loc\": [\n    \"in esse\",\n    \"eu proident\"\n   ],\n   \"msg\": \"consectetur\",\n   \"type\": \"consectetur laborum fugiat\"\n  }\n ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Dit Bonjour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Message de bienvenue :-)"
+			},
+			"response": [
+				{
+					"name": "Successful Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	]
+}
